@@ -1,5 +1,8 @@
 # randomalit
 
+[www.randomalit.com](https://www.randomalit.com)
+
+
 This project was made for fun using an "AI vibe coding" approach. This means the development process embraced spontaneity and creativity, leveraging AI assistance to generate code or ideas while maintaining a relaxed, exploratory mindset.
 
 The project is built with Vue 3 and TypeScript using Vite as the build tool, providing a modern frontend development experience with hot-reloading, TypeScript support, and efficient bundling for production.
