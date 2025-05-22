@@ -43,6 +43,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
           <RouterLink to="/dice" class="nav-link" @click="closeMobileMenu">Dice</RouterLink>
           <RouterLink to="/color" class="nav-link" @click="closeMobileMenu">Color</RouterLink>
           <RouterLink to="/palette" class="nav-link" @click="closeMobileMenu">Palette</RouterLink>
+          <RouterLink to="/restaurant" class="nav-link" @click="closeMobileMenu">Restaurant</RouterLink>
           <RouterLink to="/about" class="nav-link" @click="closeMobileMenu">About</RouterLink>
         </nav>
 
