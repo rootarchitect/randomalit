@@ -267,10 +267,6 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.theme-toggle:hover {
-  /* background-color: hsl(var(--muted)); */
-}
-
 .sun-icon,
 .moon-icon {
   transition: transform 0.2s ease;
