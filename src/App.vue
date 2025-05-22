@@ -34,7 +34,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     <header class="sticky-header">
       <div class="nav-container">
         <div class="logo-container">
-          <RouterLink to="/" class="logo" @click="closeMobileMenu">Randomalit</RouterLink>
+          <RouterLink to="/" @click="closeMobileMenu"><img class="logo"src="/apple-touch-icon.png" /> Randomalit</RouterLink>
         </div>
         <nav class="main-nav" :class="{ 'mobile-open': mobileMenuOpen }">
           <RouterLink to="/" class="nav-link" @click="closeMobileMenu">Home</RouterLink>
@@ -45,7 +45,22 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
           <RouterLink to="/palette" class="nav-link" @click="closeMobileMenu">Palette</RouterLink>
           <RouterLink to="/about" class="nav-link" @click="closeMobileMenu">About</RouterLink>
         </nav>
+
         <div class="controls">
+          <a
+            href="https://github.com/rootarchitect/randomalit"
+            target="_blank"
+            title="GitHub Repository"
+            style="margin-top: 0.4rem"
+          >
+            <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" class="github-icon">
+              <path
+                d="M12.466 0C5.582 0 0 5.611 0 12.547c0 5.548 3.567 10.255 8.519 11.912.619.125.845-.27.845-.602 0-.291-.02-1.288-.02-2.327-3.465.748-4.187-1.495-4.187-1.495-.557-1.454-1.382-1.828-1.382-1.828-1.134-.769.083-.769.083-.769 1.257.083 1.919 1.288 1.919 1.288 1.114 1.911 2.907 1.371 3.629 1.039.103-.81.433-1.371.784-1.683-2.763-.291-5.67-1.371-5.67-6.192 0-1.371.495-2.493 1.278-3.365-.124-.312-.557-1.6.124-3.324 0 0 1.052-.332 3.424 1.288 1-.29 2.042-.415 3.114-.415 1.052 0 2.124.146 3.114.415 2.372-1.62 3.424-1.288 3.424-1.288.681 1.724.247 3.012.124 3.324.804.872 1.278 1.994 1.278 3.365 0 4.82-2.907 5.88-5.691 6.192.454.395.845 1.142.845 2.327 0 1.683-.02 3.033-.02 3.449 0 .332.227.727.845.603 4.953-1.663 8.519-6.359 8.519-11.907C24.932 5.611 19.33 0 12.466 0z"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+
           <button @click="toggleTheme" class="theme-toggle" aria-label="Toggle theme">
             <svg
               v-if="isDark"
@@ -116,6 +131,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 </template>
 
 <style>
+
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -194,11 +210,21 @@ body {
 .logo-container {
   font-weight: 700;
   font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: hsl(var(--foreground));
 }
 
 .logo {
-  text-decoration: none;
-  color: hsl(var(--foreground));
+  height: 30px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 .main-nav {
@@ -212,6 +238,7 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   transition: color 0.2s;
+  border-radius: var(--radius);
 }
 
 .nav-link:hover {
@@ -241,7 +268,7 @@ body {
 }
 
 .theme-toggle:hover {
-  background-color: hsl(var(--muted));
+  /* background-color: hsl(var(--muted)); */
 }
 
 .sun-icon,
