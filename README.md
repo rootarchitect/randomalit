@@ -1,6 +1,6 @@
 # randomalit
 
-[www.randomalit.com](https://www.randomalit.com)
+[www.randomal.it](https://www.randomal.it)
 
 
 This project was made for fun using an "AI vibe coding" approach. This means the development process embraced spontaneity and creativity, leveraging AI assistance to generate code or ideas while maintaining a relaxed, exploratory mindset.
